@@ -6,7 +6,7 @@
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/icon-font.css">
+        <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
@@ -89,9 +89,24 @@
                     <div class="col-1-0f-2">
 
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="photo" class="composition__photo composition__photo-p1">
-                            <img src="img/nat-2-large.jpg" alt="photo" class="composition__photo composition__photo-p2">
-                            <img src="img/nat-3-large.jpg" alt="photo" class="composition__photo composition__photo-p3">
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                sizes="(max-width: 900px) 17vw, (max-width: 600px) 26vw, 300px"
+                                alt="photo"
+                                class="composition__photo composition__photo-p1"
+                                src="img/nat-1-large.jpg">
+
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                                sizes="(max-width: 900px) 17vw, (max-width: 600px) 26vw, 300px"
+                                alt="photo"
+                                class="composition__photo composition__photo-p2"
+                                src="img/nat-2-large.jpg">
+                                
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                                sizes="(max-width: 900px) 17vw, (max-width: 600px) 26vw, 300px"
+                                alt="photo"
+                                class="composition__photo composition__photo-p3"
+                                src="img/nat-3-large.jpg">    
+
                         </div>
                     </div>
 
@@ -425,7 +440,13 @@
         <footer class="footer">
 
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+                <picture class="footer__logo">
+                    <!-- density and art switching -->
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                    media="(max-width: 37.5rem)">
+                    <!-- density switching -->
+                        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" src="img/logo-green-2x.png" alt="Full logo">    
+                </picture>
             </div>
 
             <div class="row">
@@ -476,7 +497,7 @@
                         IMPORTANT &ndash; PLEASE READ THESE TERMS BEFORE BOOKING
                     </h3>
                     <p class="popup__text">
-                            Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy. Apple pie jelly beans topping carrot cake danish tart cake cheesecake. Muffin danish chocolate soufflé pastry icing bonbon oat cake. Powder cake jujubes oat cake. Lemon drops tootsie roll marshmallow halvah carrot cake.ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant.Just say anything, George, say what ever's natural, the first thing that comes to your mind. Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.
+                            Cupcake ipsum dolor. Sit amet marshmallow bonbon candy.Muffin danish chocolate soufflé pastry icing bonbon oat cake. Powder cake jujubes oat cake. Lemon drops tootsie roll marshmallow halvah carrot cake.ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant.Just say anything, George, say what ever's natural, the first thing that comes to your mind. Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.
                     </p>
                     <a href="#" class="btn btn--green">book now</a>
                 </div>
