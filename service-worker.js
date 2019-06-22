@@ -3,6 +3,7 @@ const cacheName = 'v2';
 const cacheAssets = [
   'index.html',
   'index.php',
+  '/js/main.js',
   '/css/icon-font.css',
   '/css/style.css',
   '/img'
@@ -11,18 +12,18 @@ const cacheAssets = [
 ////////////// call install event on sw
 
 self.addEventListener('install', e => {
-  console.log("serviceWorker installed!");
+  console.log('Service Worker: Installed');
 
   e.waitUntil(
-    caches.open(cacheName)
-    .then(cache => {
-      console.log('Service worker caching file!');
-      cache.addAll(cacheAssets)
-      .then(() => self.skipWaiting());
-    })
-
-  )
-})
+    caches
+      .open(cacheName)
+      .then(cache => {
+        console.log('Service Worker: Caching Files');
+        cache.addAll(cacheAssets);
+      })
+      .then(() => self.skipWaiting())
+  );
+});
 
 /////// call activate event
 
