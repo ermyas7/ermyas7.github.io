@@ -2,7 +2,6 @@
 const cacheName = 'v2';
 const cacheAssets = [
   'index.html',
-  'index.php',
   '/js/main.js',
   '/css/icon-font.css',
   '/css/style.css',
